@@ -1,6 +1,7 @@
 import requests
 from sdk_service.config import HUNTER_API_KEY, HUNTER_BASE_URL
 
+
 class HunterClient:
 
     def __init__(self) -> None:
