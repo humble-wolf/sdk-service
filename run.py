@@ -1,8 +1,6 @@
-from sdk_service.client import HunterClient
+from sdk_service.service import HunterService
 
-client = HunterClient()
+service = HunterService()
 
-
-email = "test@email.com"
-
-print(client.email_verifier(email))
+email = "test@example.com"
+print("Verifying email:", service.verify_email(email))
