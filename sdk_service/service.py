@@ -1,3 +1,4 @@
+from typing import Dict, Any
 from sdk_service.client import HunterClient
 from sdk_service.storage import Storage
 
@@ -8,7 +9,7 @@ class HunterService:
         self.client = HunterClient()
         self.storage = Storage()
 
-    def verify_email(self, email: str) -> dict:
+    def verify_email(self, email: str) -> Dict[str, Any]:
         cached_response = self.storage.get(email)
         if cached_response is not None:
             return cached_response
